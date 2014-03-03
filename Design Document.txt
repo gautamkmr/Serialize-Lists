@@ -1,0 +1,38 @@
+ This is interactive program. So you will get the instructions on terminal 
+ as soon as you run the program.
+
+ Instructions: 
+  Follow README
+
+
+ Output format.
+
+  Program will show the available options to user
+	Press 1 to add a new list
+	Press 2 to Display a given list
+	Press 3 to add a node to any given list
+	Press 4 to remove a node from a list
+	Press 5 to remove a list
+	Press 6 to Exit program
+
+ As soon as user types his entry he will be promoted to next question or action based on his entry
+ for eg: if he enters 1 then one empty list will be created and user will have the list_id as an output.
+         if he enters 3 then he will be prompted to the next question like list_id and value for the node.
+         etc.
+
+ The program will generate List.data file in the current directory. 
+
+ Design:
+        This program will deserialize the file and construct the lists into 
+        memory and show the existing lists to user when user runs the program first time.
+
+        Based on the user opeartions in memory structures will get modified and when user quit the program
+        the entire in-memory content will be written to file.
+
+        I am writing(Serializing, when user quits the program) and reading (Desializing, when user start the program) 
+        the file once, this saves the number of disk access to the program. 
+  
+        Imagine if an adversary user provides inputs which can cause file read and write in every operations 
+        so in the worse case we need to read/write the the file in every operation, but in this design the read and 
+        write happens onlye start and end of the program so even such adversary user can't perform his evil actions. 
+  
