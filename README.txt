@@ -1,4 +1,6 @@
-Steps
+A program which serialize and deserialize the set of link lists.
+You can create as many link lists as you want and you can perform the operations(delete, insert, display) on each link list node 
+Steps.
 
 Compiliation
 
